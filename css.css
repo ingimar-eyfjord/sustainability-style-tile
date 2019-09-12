@@ -1,3 +1,132 @@
 @charset "utf-8";
 /* CSS Document */
+@import url('https://fonts.googleapis.com/css?family=Rajdhani:300,400,500,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Tajawal&display=swap');
+:root {
+  --bg-color: #000;
+  --link-color: #ABC3DA;
+  --link-hover-color: #7C6A66;
+  --color-4: #000;
+  --color-5: #000;
+	
+/* --primary-font: 'Rajdhani', sans-serif;*/
+--primary-font:  'Tajawal', sans-serif;
+--secondary-font: 'Rajdhani', sans-serif;
+	
+	--color1:#ABC3DA;
+	--color2:#7F8989;
+	--color3:#505554;
+	--color4:#7C6A66;
+	--color5:#A9B2B0;
+}
+body{padding: 0;
+	margin:0;}
 
+h2{font-family: var(--secondary-font);}
+
+p{ font-family: var(--secondary-font);}
+
+.displaynone{
+	display: none;
+}
+
+.restaurantBody{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-rows: 40vh auto;
+}
+.showclientcards{
+	grid-row: 2;
+	grid-column: span 4;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	
+}
+
+.clientcard{
+	margin: 1em;
+	width: 15vw;
+	height: auto;
+	display: block;
+	background-color: lightblue;
+	display: grid;
+	position: relative;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 2fr 0.25fr 0.25fr 0.25fr 0.25fr;
+}
+
+.clientlogo{
+	grid-column-start: 1;
+	grid-column-end: span 2;
+	grid-row: 1;
+}
+.clientlogo img{
+	width: 15vw;
+	height: auto;
+}
+.clientname{
+	position: absolute;
+	grid-column-start: 1;
+	grid-column-end: 3;
+	grid-row: 2;
+	line-height: 0em;
+	padding-left: 0.3em;
+}
+.clientshortinfo{
+	position: absolute;
+	white-space: nowrap;
+	grid-column-start: 1;
+	grid-column-end: 3;
+	grid-row: 3;
+	padding-left: 0.4em;
+	line-height: 0em;
+}
+.clientlocationMaps{
+	position: absolute;
+	grid-column: 2;
+	grid-row: 2; 
+	margin-top: 0.5em;
+	margin-right: 1.5em;
+	justify-self:end;
+}
+.clientlocationMaps img{
+	position: absolute;
+	width: 1em;
+	height: auto;
+}
+.clientlocation{
+	white-space: nowrap;
+	position: absolute;
+	grid-column: 2;
+	grid-row: 3;
+	line-height: 0em;
+	margin-right: 0.5em;
+	justify-self:end;
+}
+.stars{
+	position: absolute;
+	grid-column: 2;
+	grid-row:4;
+	line-height: 0em;
+	margin-top: 0.5em;
+	margin-right:0.5em;
+	justify-self:end;
+}
+.stars img{
+	width: 5vw;
+	height: auto;
+}
+.iconidentifiers{
+	grid-column: span 2;
+	grid-row: 5;
+	margin-left: 0.4em;
+	padding-top:0.5em;
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+.iconidentifiers img{
+	height: 2em;
+	width:auto;
+}
